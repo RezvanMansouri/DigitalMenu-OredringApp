@@ -32,3 +32,15 @@ the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
 ![image](https://user-images.githubusercontent.com/98574946/165184172-3ae9283f-5356-403a-afeb-5aa95d6e29ca.png)
+![image](https://user-images.githubusercontent.com/98574946/165184295-b3bf9893-c8b5-409a-bde6-b95592394c67.png)
+![image](https://user-images.githubusercontent.com/98574946/165184326-a848dfb0-4fbb-4acc-bb5b-53eeacdc0830.png)
+![image](https://user-images.githubusercontent.com/98574946/165184469-d119deb9-2b17-488e-9a89-fdb5de74dd3f.png)
+![image](https://user-images.githubusercontent.com/98574946/165184491-bfac9c19-078d-487a-9ac0-b559d8f4d6b9.png)
+![image](https://user-images.githubusercontent.com/98574946/165184525-19a2144c-be0f-40a2-9672-75350eceaef8.png)
+
+
+
+
+
+
+
