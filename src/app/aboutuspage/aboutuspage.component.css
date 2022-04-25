@@ -1,0 +1,39 @@
+#sect1 {
+  color: #0e0e0e;
+  background-image: url('src/assets/images/homepic.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.btn-primary{
+  color: #efeeee;
+  background-color: #78b92b;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+.btn-light {
+  color: #efede4;
+  background-color: #34201d;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border : 0px;
+}
+
+.btn-danger{
+  color: #efeeee;
+  background-color: #db3545;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+
+h5{
+  font-size: small;
+}
+p{
+  font-size: small;
+}

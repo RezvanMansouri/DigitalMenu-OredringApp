@@ -1,0 +1,109 @@
+#sect1 {
+  color: #efede4;
+  background-image: url('src/assets/images/homepic.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
+.card{
+  color: black;
+}
+
+
+.btn-light:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #efeeee;
+  background-color: #b88b02;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+.btn-dark {
+  color: #efeeee;
+  background-color: #34201d;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+.btn-light {
+  color: #efede4;
+  background-color: #34201d;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border : 0px;
+}
+
+
+
+.btn-dark:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #efeeee;
+  background-color: #b88b02;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+h4{
+  margin-top: 10px;
+  color: #260f09;
+
+  font-family: fantasy;
+
+}
+h1{
+  text-align:center;
+  font-style: italic;
+  color: black;
+  margin-top: 20px;
+}
+
+table{
+margin-right: 7px;
+  margin-left: auto;
+  font-size: small;
+}
+tr{
+  width: auto;
+  border: 0px;
+}
+
+
+.table > :not(:first-child) {
+  border-top: 0 solid currentColor;
+}
+
+.btn-info {
+  color: #000000;
+  border-color: #598f2c;
+  background-color: #78b92b;
+}
+.btn-info:hover {
+  color: #000;
+  background-color: #4e962b;
+  border-color: #000000;
+
+}
+
+
+figcaption{
+  text-align:left;
+  font-size: x-small;
+}
+
+span{
+  margin-right: 2em;
+  font-size: smaller;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+button{
+  font-size:x-small;
+}

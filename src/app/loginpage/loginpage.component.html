@@ -1,0 +1,93 @@
+<div id="sect1" class="bg-image">
+
+  <div class="container-fluid">
+    <a routerLink="../home" class="btn btn-lg btn-light " role="button" aria-pressed="true"> <i
+      class="fa-solid fa-angle-left"></i></a>
+  </div>
+
+  <div class="container-fluid" style="display: none" id="login">
+
+    <div class="card">
+      <div class="card-header ">
+        <h6 class="align-content-center">Login</h6>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+          <div class="mb-3">
+            <label for="email"><b>Email </b></label>
+            <input formControlName="email" type="text" name="email"
+                   class="form-control" id="email" placeholder="Enter your Email">
+
+            <div *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty
+            || loginForm.get('email').touched)" class="alert alert-danger">
+              <small *ngIf="loginForm.get('email').errors?.['required']">
+                Email is required</small>
+              <small *ngIf="loginForm.get('email').errors?.['email']">
+                Email must be in a correct format</small>
+            </div>
+
+          </div>
+
+          <div class="mb-3">
+            <label for="password"><b>Password </b></label>
+            <input formControlName="password" type="password" name="password"
+                   class="form-control" id="password" placeholder="Enter your Password">
+
+            <div *ngIf="loginForm.get('password').invalid &&
+               (loginForm.get('password').dirty
+            || loginForm.get('password').touched)" class="alert alert-danger">
+              <small *ngIf="loginForm.get('password').errors?.['required']">
+                Password is required</small>
+              <small *ngIf="loginForm.get('password').errors?.['pattern']">
+                Password must be eight characters including one uppercase letter, one special character and alphanumeric
+                characters</small>
+            </div>
+          </div>
+
+          <div class="d-grid btn-container">
+            <button type="submit" class="btn btn-dark" [disabled]="!loginForm.valid">Login</button>
+          </div>
+
+        </form>
+
+        <div id="error" style="display: none">
+          <p class=" alert alert-danger"> Incorrect Email or Password!</p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container-fluid" style="display: none" id="logout">
+
+    <div class="card">
+      <div class="card-header ">
+        <h6 class="align-content-center">Logout</h6>
+      </div>
+      <div class="card-body">
+
+        <div class="container-fluid align-content-center link-container ">
+          You are already Logged In. Do you want to
+          <div class="d-grid btn-container">
+            <button type="Button" id="btnLogout" name="btnLogout" data-icon="plus" data-iconpos="left/right/top/bottom"
+                    (click)="onLogout()" data-theme="a" data-inline="true" class="btn btn-dark">Logout
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container-fluid align-content-center link-container ">
+    <a routerLink="../signup" class="link-light  ">
+      <i class="fa-solid fa-circle-user"></i> <h5>Create a new account</h5></a>
+  </div>
+  <br><br><br>
+</div>

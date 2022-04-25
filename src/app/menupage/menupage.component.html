@@ -1,0 +1,357 @@
+<div id="sect1" class="bg-image">
+
+  <div class="container-fluid position-relative">
+
+    <div class="row">
+      <div class="col-sm">
+        <a routerLink="../home" id="btn" class="btn btn-lg btn-light " role="button" aria-pressed="true"> <i
+          class="fa-solid fa-angle-left"></i></a>
+        <a (click)="btnCart_click();" class="btn btn-success" style=" float: right">
+                    <i class="fas fa-shopping-cart"></i> Cart</a>
+      </div>
+
+      </div>
+    <div class="row">
+      <div class="text-center">
+        <h4 style="display:inline-block" id="UserName" class="text-right">
+         <b> {{userName}}</b>
+        </h4>
+      </div>
+    </div>
+
+
+    <div class="container-fluid ">
+
+      <div class="card">
+        <div class="card-header ">
+          <h6 class="align-content-center">Menu</h6>
+        </div>
+        <div class="card-body">
+
+          <div id="Appetizers">
+
+            <table class="table table-image">
+
+              <thead class="font-weight-bold">APPETIZERS</thead>
+
+              <tbody>
+              <th colspan="4" class="font-weight-bold">Salad</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/salad.png"  alt="Coleslaw" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $14.99
+                </td>
+                <td class="col-sm-3 ">
+                  <label for="txtQty"> Qty:&nbsp;</label>
+                  <input type="number" name="txtQty" class="form-group  mb-1" id="txtQty" #txtQty min="0" max="30"
+                         value="0">
+                </td>
+                <td class="col-sm-3 text-right">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Salad',txtQty.value, 14.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+
+                <th colspan="4" class="font-weight-bold">Stuffed Mushroom</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/stuffedMushroom.png" alt="Coleslaw" width="60" height="50">
+                </td>
+                <td> $15.99</td>
+                <td class="col-sm-3">
+                  <label for="txtMushroom"> Qty:&nbsp;</label>
+                  <input type="number" name="txtMushroom" id="txtMushroom" #txtMushroom class="form-group  mb-1" min="0"
+                         max="30" value="0">
+                  <br>
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('mushroom',txtMushroom.value, 15.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+                <th colspan="4" class="font-weight-bold ">Fries</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/fries.png" alt="fries" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $10.99</td>
+                <td class="col-sm-3">
+                  <label for="txtFries"> Qty:&nbsp;</label>
+                  <input type="number" name="txtFries" id="txtFries" #txtFries class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('fries',txtFries.value, 10.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Hot Spinach Artichoke Dip</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/hotSpinach.png" alt="Spinach" width="60" height="50">
+                </td>
+                <td class="col-sm-3">$20.99</td>
+                <td class="col-sm-3">
+                  <label for="txtSpinach"> Qty:&nbsp;</label>
+                  <input type="number" name="txtSpinach" id="txtSpinach" #txtSpinach class="form-group  mb-1" min="0"
+                         max="30" value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Spinach',txtSpinach.value, 20.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div id="mainDish">
+            <table class="table table-image ">
+
+              <thead class="font-weight-bold">MAIN DISHES</thead>
+              <tbody>
+
+              <th colspan="4" class="font-weight-bold">Instant Pot Chicken Masala</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/potchicken.png" alt="Masala" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $18.99</td>
+                <td class="col-sm-3">
+                  <label for="txtMasala"> Qty:&nbsp;</label>
+                  <input type="number" name="txtMasala" id="txtMasala" #txtMasala class="form-group  mb-1" min="0"
+                         max="30"
+                         value="0">
+                  <br>
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Masala',txtMasala.value, 18.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Chicken Fried Rice</th>
+              <tr>
+                <td class="col-sm-3 col-sm-6">
+                  <img src="../assets/images/chickenFriedRice.png" alt="Rice" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $20.00</td>
+                <td class="col-sm-3">
+                  <label for="txtRice"> Qty:&nbsp;</label>
+                  <input type="number" name="txtRice" id="txtRice" #txtRice class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                  <br>
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Rice',txtRice.value, 20.00)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Chicken Cacciatore</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/chickenCacciatore.png" alt="Cacciatore" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $20.00</td>
+                <td class="col-sm-3">
+                  <label for="txtCacciatore"> Qty:&nbsp;</label>
+                  <input type="number" name="txtCacciatore" id="txtCacciatore" #txtCacciatore class="form-group  mb-1"
+                         min="0" max="30" value="0">
+                  <br>
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button"
+                          (click)="AddOrder('Cacciatore',txtCacciatore.value, 20.00)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Beef Stroganoff</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/beef.png" alt="Stroganoff" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $20.00</td>
+                <td class="col-sm-3">
+                  <label for="txtStroganoff"> Qty:&nbsp;</label>
+                  <input type="number" name="txtStroganoff" id="txtStroganoff" #txtStroganoff class="form-group  mb-1"
+                         min="0" max="30" value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button"
+                          (click)="AddOrder('Stroganoff',txtStroganoff.value, 20.00)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="drink">
+            <table class="table table-image">
+
+              <thead class="font-weight-bold">DRINKS</thead>
+              <tbody>
+
+              <th colspan="4" class="font-weight-bold">Water</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/water.png" alt="Water" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $5.99</td>
+                <td class="col-sm-3">
+                  <label for="txtWater"> Qty:&nbsp;</label>
+                  <input type="number" name="txtWater" id="txtWater" #txtWater class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Water',txtWater.value, 5.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Australia Day Cocktails</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/cocktails.png" alt="Cocktails" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $14.99</td>
+                <td class="col-sm-3">
+                  <label for="txtCocktails"> Qty:&nbsp;</label>
+                  <input type="number" name="txtCocktails" id="txtCocktails" #txtCocktails class="form-group  mb-1"
+                         min="0"
+                         max="30" value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Cocktails',txtCocktails.value, 14.99)">
+                    <i class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Vodka</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/vodka.png" alt="Vodka" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $14.99</td>
+                <td class="col-sm-3">
+                  <label for="txtVodka"> Qty:&nbsp;</label>
+                  <input type="number" name="txtVodka" id="txtVodka" #txtVodka class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Vodka',txtVodka.value, 14.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              <th colspan="4" class="font-weight-bold">Soda</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/soda.png" alt="Soda" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $9.99</td>
+                <td class="col-sm-3">
+                  <label for="txtSoda"> Qty:&nbsp;</label>
+                  <input type="number" name="txtSoda" id="txtSoda" #txtSoda class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Soda',txtSoda.value, 9.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="Dessert">
+            <table class="table table-image">
+
+              <thead class="font-weight-bold">DESSERT</thead>
+              <tbody>
+
+                <th class="font-weight-bold col-sm-6">Chocolate Cake</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/cake.png" alt="Cake" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $8.99</td>
+                <td class="col-sm-3">
+                  <label for="txtCake"> Qty:&nbsp;</label>
+                  <input type="number" name="txtCake" id="txtCake" #txtCake class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Cake',txtCake.value, 8.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+                <th colspan="4" class="font-weight-bold">Apple Pie</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/pie.png" alt="Pie" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $12.99</td>
+                <td class="col-sm-3">
+                  <label for="txtPie"> Qty:&nbsp;</label>
+                  <input type="number" name="txtPie" id="txtPie" #txtPie class="form-group  mb-1" min="0" max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Pie',txtPie.value, 8.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+                <th colspan="4" class="font-weight-bold">Chocolate Peanut Shakes</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/shakes.png" alt="Shakes" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $12.99</td>
+                <td class="col-sm-3">
+                  <label for="txtShakes"> Qty:&nbsp;</label>
+                  <input type="number" name="txtShakes" id="txtShakes" #txtShakes class="form-group  mb-1" min="0"
+                         max="30"
+                         value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Shakes',txtShakes.value, 12.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+                <th colspan="4" class="font-weight-bold">Mocha Baked Alaskas</th>
+              <tr>
+                <td class="col-sm-3">
+                  <img src="../assets/images/alaskas.png" alt="Alaskas" width="60" height="50">
+                </td>
+                <td class="col-sm-3"> $15.99</td>
+                <td class="col-sm-3">
+                  <label for="txtAlaskas"> Qty:&nbsp;</label>
+                  <input type="number" name="txtAlaskas" id="txtAlaskas" #txtAlaskas class="form-group  mb-1" min="0"
+                         max="30" value="0">
+                </td>
+                <td class="text-right col-sm-3">
+                  <button class="btn btn-info" type="button" (click)="AddOrder('Alaskas',txtAlaskas.value, 15.99)"><i
+                    class="fas fa-shopping-cart"></i></button>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>

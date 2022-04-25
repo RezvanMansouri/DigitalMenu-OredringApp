@@ -1,0 +1,67 @@
+#sect1 {
+  color: #efede4;
+  background-image: url('src/assets/images/homepic.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.card{
+  color : black;
+}
+
+.btn-light {
+  color: #efede4;
+  background-color: #34201d;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border : 0px;
+
+}
+
+
+.btn-light:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #efeeee;
+  background-color: #b88b02;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+
+
+
+.btn-dark{
+  color: #efeeee;
+  background-color: #34201d;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+
+
+.btn-dark:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #efeeee;
+  background-color: #b88b02;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+  border: 0px;
+}
+
+
+.link-container{
+  padding-top: 50px;
+  text-align: center;
+
+}
+.btn-container{
+  padding-top:40px ;
+}
+
+#error{
+  padding-top: 50px;
+}
+#btnLogout{
+
+}

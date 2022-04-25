@@ -1,0 +1,136 @@
+<div id="sect1" class="bg-image">
+
+  <div class="container-fluid ">
+    <a routerLink="../home" class="btn btn-lg btn-light " role="button" aria-pressed="true"> <i
+      class="fa-solid fa-angle-left"></i></a>
+
+  <div class="card">
+    <div class="card-header ">
+      <h6 class="align-content-center">Create Account</h6>
+    </div>
+
+    <div class="card-body">
+
+        <form [formGroup]="signupForm">
+          <div class="mb-2">
+            <label for="firstName" class="form-label"><b>First Name </b></label>
+            <input formControlName="firstName" type="text"
+                   class="form-control" id="firstName" placeholder="Enter your Firstname">
+
+            <div *ngIf="signupForm.get('firstName').invalid && (signupForm.get('firstName').dirty
+            || signupForm.get('firstName').touched)" class="text-danger">
+              <small *ngIf="signupForm.get('firstName').errors?.['required']">
+                Firstname is required.</small>
+              <small *ngIf="signupForm.get('firstName').errors?.['minlength']">
+                Firstname must be at least 2 characters long.</small>
+              <small class="text-danger" *ngIf="signupForm.controls['firstName'].errors?.['maxlength']">
+                Firstname must be at most 10 char long</small>
+            </div>
+          </div>
+          <div class="mb-2">
+
+            <label for="lastName"><b>Last Name </b></label>
+            <input formControlName="lastName" type="text" name="lastName"
+                   class="form-control" id="lastName" placeholder="Enter your Lastname">
+
+            <div *ngIf="signupForm.get('lastName').invalid && (signupForm.get('lastName').dirty
+            || signupForm.get('lastName').touched)" class="text-danger">
+              <small *ngIf="signupForm.get('lastName').errors?.['required']">
+                Lastname is required</small>
+              <small *ngIf="signupForm.get('lastName').errors?.['minlength']">
+                Lastname must be at least 2 characters long</small>
+              <small class="text-danger" *ngIf="signupForm.controls['lastName'].errors?.['maxlength']">
+                Lastname must be at most 10 char long</small>
+            </div>
+
+          </div>
+          <div class="mb-2">
+            <label for="email"><b>Email </b></label>
+            <input formControlName="email" type="text" name="email"
+                   class="form-control" id="email" placeholder="Enter your Email">
+
+            <div *ngIf="signupForm.get('email').invalid && (signupForm.get('email').dirty
+            || signupForm.get('email').touched)" class="text-danger">
+              <small *ngIf="signupForm.get('email').errors?.['required']">
+                Email is required</small>
+              <small *ngIf="signupForm.get('email').errors?.['email']">
+                Email must be in a correct format</small>
+            </div>
+
+          </div>
+
+          <div formGroupName="passwordGroup">
+            <div class="mb-2">
+              <label for="password"><b>Password </b></label>
+              <input formControlName="password" type="password" name="password"
+                     class="form-control" id="password" placeholder="Enter your Password">
+
+              <div *ngIf="signupForm.get('passwordGroup').get('password').invalid &&
+               (signupForm.get('passwordGroup').get('password').dirty
+            || signupForm.get('passwordGroup').get('password').touched)" class="text-danger">
+                <small *ngIf="signupForm.get('passwordGroup').get('password').errors?.['required']">
+                  Password is required</small>
+                <small *ngIf="signupForm.get('passwordGroup').get('password').errors?.['pattern']">
+                  Password must be eight characters including one uppercase letter, one special character and alphanumeric characters</small>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="confirmPassword"><b>Confirm Password </b></label>
+              <input formControlName="confirmPassword" type="password" name="confirmPassword"
+                     class="form-control" id="confirmPassword" placeholder="Confirm your Password">
+
+              <div *ngIf="signupForm.get('passwordGroup').get('confirmPassword').invalid &&
+               (signupForm.get('passwordGroup').get('confirmPassword').dirty
+            || signupForm.get('passwordGroup').get('confirmPassword').touched)" class="text-danger">
+                <small *ngIf="signupForm.get('passwordGroup').get('confirmPassword').errors?.['required']">
+                  Confirm Password is required
+                </small>
+
+              </div>
+              <div *ngIf="signupForm.get('passwordGroup').invalid &&
+                        (signupForm.get('passwordGroup').get('password').touched
+                            && signupForm.get('passwordGroup').get('confirmPassword').touched)">
+                <small class="text-danger"
+                       *ngIf="signupForm.get('passwordGroup').errors['passwordMismatch']">Passwords must match</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-2">
+            <label for="phone"><b>phone </b></label>
+            <input formControlName="phone" type="text" name="phone"
+                   class="form-control" id="phone" placeholder="0000000000">
+
+            <div *ngIf="signupForm.get('phone').invalid && (signupForm.get('phone').dirty
+            || signupForm.get('phone').touched)" class="text-danger">
+              <small *ngIf="signupForm.get('phone').errors?.['required']">
+                Phone number is required</small>
+              <small *ngIf="signupForm.get('phone').errors?.['pattern']">
+                Phone number must be in a correct format</small>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="zipCode"><b>Zipcode </b></label>
+            <input formControlName="zipCode" type="text" name="zipCode"
+                   class="form-control" id="zipCode" placeholder="">
+
+            <div *ngIf="signupForm.get('zipCode').invalid && (signupForm.get('zipCode').dirty
+            || signupForm.get('zipCode').touched)" class="text-danger">
+              <small *ngIf="signupForm.get('zipCode').errors?.['pattern']">
+                Zipcode must be in a correct format</small>
+            </div>
+          </div>
+          <div class="d-grid btn-container">
+            <button type="submit" class="btn btn-dark" [disabled]="!signupForm.valid" (click)="onSubmit()">Create Account</button>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>

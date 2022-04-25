@@ -1,0 +1,67 @@
+<div id="sect1" class="bg-image">
+
+  <div class="container-fluid position-relative">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <a routerLink="/menu" id="btn" class="btn btn-lg btn-light " role="button" aria-pressed="true"> <i
+          class="fa-solid fa-angle-left"></i></a>
+      </div>
+      <div class="row">
+      <div class="text-center">
+        <h4 style="display:inline-block" id="UserName" class="text-right">
+          <b> {{userName}}</b>
+        </h4>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="card">
+        <div class="card-header ">
+          <h6 class="align-content-center">Cart</h6>
+        </div>
+        <div class="card-body">
+          <table class="table">
+          <thead class="font-weight-bold"  id="itemHeader" style="display: none">List of Orders</thead>
+            <tr *ngFor="let o of orders">
+
+              <input type="hidden" value="{{o.orderId}}" #txtOrderId>
+              <td class="col-sm-3">
+                <label><b>{{o.entry}}</b></label>
+              </td>
+              <td class="col-sm-3">
+                <label>${{o.price}}</label>
+              </td>
+              <td class="col-sm-3">
+
+                <label for="txtQty"> Qty:&nbsp;</label>
+                <input type="number" name="txtQty" id="txtQty" class="form-group " #txtQty  min="0" max="30" value="{{o.qty}}">
+                <br>
+              </td>
+              <td class=" text-right col-sm-3">
+                <button class="btn btn-outline-dark" type="button" (click)="UpdateOrder(txtOrderId.value,o.entry,txtQty.value,o.price)"><i class="fa-solid fa-pen"></i></button>&nbsp;
+                <button class="btn btn-outline-danger" (click)="DeleteOrder(txtOrderId.value)" type="button" ><i class="fa-solid fa-trash-can"></i></button>
+              </td>
+
+            </tr>
+          </table>
+
+          <div  class="container-fluid d-grid gap-2 btn-container" >
+            <a class=" btn btn-dark" (click)="btnReceipt_click();"  role="button" id="items" style="display: none; color: white">
+               Place My Order</a>
+          </div>
+
+          <div  class="container-fluid d-grid gap-2 btn-container" >
+            <h5 id="empty" style="display: block" class="text-center">
+              Your cart is empty</h5>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>

@@ -1,0 +1,58 @@
+<div id="sect1" class="bg-image">
+
+  <div class="container-fluid position-relative">
+
+    <div class="row">
+
+      <div class="row">
+        <div class="text-center">
+          <h4 style="display:inline-block" id="UserName" class="text-right ">
+           <b> {{userName}}</b>
+          </h4>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="card">
+        <div class="card-header ">
+          <h6 class="align-content-center">Receipt</h6>
+        </div>
+        <div class="card-body">
+          <table class="table ">
+            <thead class="font-weight-bold"  id="itemHeader" style="display: none">List of Orders</thead>
+            <tr>
+              <th>Entry</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th class=" text-right">Total</th>
+            </tr>
+            <tr *ngFor="let o of orders">
+
+              <td class="col-sm-3">
+                <label><b>{{o.entry}}</b></label>
+              </td>
+              <td class="col-sm-3">
+                <label>${{o.price}}</label>
+              </td>
+              <td class="col-sm-3">
+                <label>{{o.qty}}</label>
+              </td>
+              <td class=" text-right col-sm-3">
+                <label > ${{o.qty * o.price}}</label>
+              </td>
+            </tr>
+            <tr style="border: #0e0e0e 2px solid">
+              <td colspan="3">Total:</td>
+              <td >${{total}}</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>
