@@ -29,3 +29,6 @@ package that implements end-to-end testing capabilities.
 
 To get more help on the Angular CLI use `ng help` or go check out
 the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+![image](https://user-images.githubusercontent.com/98574946/165184172-3ae9283f-5356-403a-afeb-5aa95d6e29ca.png)
